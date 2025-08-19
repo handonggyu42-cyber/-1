@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Handong App">
+  <meta name="theme-color" content="#ff6b6b">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-192.png">
+  <title>Handong App</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="title">Handong App</div>
+      <div class="sub">홈 화면에 추가하면 앱처럼 바로 실행돼요!</div>
+    </header>
+
+    <main class="content">
+      <section class="card" data-screen="home">
+        <h2>환영합니다!</h2>
+        <p>이제 Handong App을 홈 화면에서 바로 앱처럼 사용할 수 있어요.</p>
+        <button id="installBtn" class="btn" style="display:none">설치하기</button>
+      </section>
+
+      <section class="card" data-screen="feed" style="display:none">
+        <h2>피드</h2>
+        <div class="list">
+          <div class="item">콘텐츠 1<br><small>오프라인에서도 볼 수 있어요</small></div>
+          <div class="item">콘텐츠 2</div>
+          <div class="item">콘텐츠 3</div>
+        </div>
+      </section>
+
+      <section class="card" data-screen="settings" style="display:none">
+        <h2>설정</h2>
+        <p>여기서 테마나 옵션을 바꿔보세요.</p>
+      </section>
+    </main>
+
+    <nav class="tabbar">
+      <a class="tab active" data-tab="home">홈</a>
+      <a class="tab" data-tab="feed">피드</a>
+      <a class="tab" data-tab="settings">설정</a>
+    </nav>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

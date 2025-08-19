@@ -1,0 +1,20 @@
+/* Custom PWA 스타일 */
+:root { --bg:#0a1f2b; --panel:#1a293b; --text:#f0f4f8; --muted:#a0b0c0; --primary:#ff6b6b; }
+* { box-sizing: border-box; }
+html, body { height:100%; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif; background:var(--bg); color:var(--text); }
+.app { display:flex; flex-direction:column; height:100%; }
+.header { padding:16px 16px calc(env(safe-area-inset-top) + 8px); padding-top:calc(env(safe-area-inset-top) + 12px); position:sticky; top:0; background:var(--bg); z-index:10; }
+.title { font-size:22px; font-weight:800; letter-spacing:.2px; }
+.sub { color:var(--muted); font-size:13px; margin-top:4px; }
+.content { flex:1; padding:16px; display:flex; gap:16px; flex-direction:column; }
+.card { background:var(--panel); border-radius:18px; padding:18px; box-shadow:0 12px 28px rgba(0,0,0,.25); }
+.btn { padding:12px 14px; border-radius:14px; border:none; font-weight:700; background:var(--primary); color:#fff; cursor:pointer; width:100%; }
+.btn:active { transform: translateY(1px); }
+.tabbar { position:sticky; bottom:0; background:var(--panel); display:flex; border-radius:18px 18px 0 0; padding:calc(env(safe-area-inset-bottom) + 10px) 10px 10px; gap:10px; box-shadow: 0 -8px 20px rgba(0,0,0,.35); }
+.tab { flex:1; text-align:center; padding:12px 6px; border-radius:12px; font-weight:700; color:var(--muted); }
+.tab.active { background:rgba(255,107,107,.15); color:#ffb3b3; }
+.list { display:grid; grid-template-columns: 1fr; gap:12px; }
+.item { background:#15273d; padding:14px; border-radius:14px; }
+small { color:var(--muted); }
+a { color:inherit; text-decoration: none; }
